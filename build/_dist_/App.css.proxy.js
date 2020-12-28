@@ -1,0 +1,1 @@
+if(typeof document!="undefined"){const t="h1.svelte-2gf3fb{color:blue;display:-webkit-box;display:-ms-flexbox;display:flex}",e=document.createElement("style"),d=document.createTextNode(t);e.type="text/css",e.appendChild(d),document.head.appendChild(e)}

@@ -1,0 +1,30 @@
+{
+  "name": "svelte-movie-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "snowpack dev",
+    "build": "snowpack build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "devDependencies": {
+    "@snowpack/plugin-babel": "^2.1.5",
+    "@snowpack/plugin-dotenv": "^2.0.5",
+    "@snowpack/plugin-optimize": "^0.2.10",
+    "@snowpack/plugin-sass": "^1.2.0",
+    "@snowpack/plugin-svelte": "^3.4.1",
+    "autoprefixer": "^10.1.0",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "postcss": "^8.2.1",
+    "snowpack": "^2.18.5",
+    "svelte": "^3.31.0",
+    "svelte-spa-router": "^3.1.0"
+  }
+}

@@ -1,0 +1,1 @@
+import{SvelteComponent as a,detach as l,element as s,init as d,insert as i,noop as n,safe_not_equal as c}from"../../web_modules/svelte/internal.js";function u(r){let e;return{c(){e=s("header"),e.textContent="Header"},m(t,o){i(t,e,o)},p:n,i:n,o:n,d(t){t&&l(e)}}}class m extends a{constructor(e){super();d(this,e,null,u,c,{})}}export default m;
