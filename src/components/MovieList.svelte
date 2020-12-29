@@ -1,6 +1,7 @@
 <script>
-    import { movies } from "~/store/movie";
+    import { movies, loading } from "~/store/movie";
     import MovieCard from "./MovieCard.svelte";
+    import Loader from "./Loader.svelte";
 </script>
 
 <style lang="scss">
@@ -20,6 +21,9 @@
 </style>
 
 <div class="movie-list">
+    {#if $loading}
+        <Loader />
+    {/if}
     <div class="movies">
         {#each $movies as movie (movie.imdbID)}
             <MovieCard {movie} />
