@@ -2,6 +2,11 @@
     import { link } from "svelte-spa-router";
 </script>
 
+<a use:link href="/">
+    <span>OMDbAPI</span>.COM
+</a>
+
+
 <style lang="scss">
     a {
         display: block;
@@ -15,5 +20,3 @@
         color: $color--primary;
     }
 </style>
-
-<a use:link href="/"><span>OMDbAPI</span>.COM</a>

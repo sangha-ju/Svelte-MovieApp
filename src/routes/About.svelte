@@ -14,6 +14,23 @@
     $: phone = query.phone || "+82-10-5531-3966";
 </script>
 
+<div class="user-profile">
+    <div class="photos">
+        <div class="photo">
+            <img src="/assets/svelte.png" alt="user" />
+        </div>
+        <div class="photo">
+            <img src="/assets/duck.jpg" alt="user" />
+        </div>
+    </div>
+    <div class="details">
+        <div class="name">{name}</div>
+        <div class="email">{email}</div>
+        <div class="blog">{blog}</div>
+        <div class="phone">{phone}</div>
+    </div>
+</div>
+
 <style lang="scss">
     .user-profile {
         padding: 80px 0;
@@ -54,16 +71,3 @@
         }
     }
 </style>
-
-<div class="user-profile">
-    <div class="photos">
-        <div class="photo"><img src="/assets/svelte.png" alt="user" /></div>
-        <div class="photo"><img src="/assets/duck.jpg" alt="user" /></div>
-    </div>
-    <div class="details">
-        <div class="name">{name}</div>
-        <div class="email">{email}</div>
-        <div class="blog">{blog}</div>
-        <div class="phone">{phone}</div>
-    </div>
-</div>

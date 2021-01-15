@@ -4,6 +4,23 @@
     export let fixed;
 </script>
 
+<!--https://tobiasahlin.com/spinkit/-->
+
+<div
+    style="transform: scale({scale});"
+    class:absolute
+    class:fixed
+    class="loading">
+    <div class="sk-chase">
+        <div class="sk-chase-dot" />
+        <div class="sk-chase-dot" />
+        <div class="sk-chase-dot" />
+        <div class="sk-chase-dot" />
+        <div class="sk-chase-dot" />
+        <div class="sk-chase-dot" />
+    </div>
+</div>
+
 <style lang="scss">
     .loading {
         width: 40px;
@@ -101,20 +118,3 @@
         }
     }
 </style>
-
-<!--https://tobiasahlin.com/spinkit/-->
-
-<div
-    style="transform: scale({scale});"
-    class:absolute
-    class:fixed
-    class="loading">
-    <div class="sk-chase">
-        <div class="sk-chase-dot" />
-        <div class="sk-chase-dot" />
-        <div class="sk-chase-dot" />
-        <div class="sk-chase-dot" />
-        <div class="sk-chase-dot" />
-        <div class="sk-chase-dot" />
-    </div>
-</div>

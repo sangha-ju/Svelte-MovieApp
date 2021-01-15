@@ -4,6 +4,23 @@
     import Loader from "./Loader.svelte";
 </script>
 
+<div 
+    class:no-result={!$movies.length} 
+    class="movie-list"
+>
+    {#if $loading}
+        <Loader />
+    {/if}
+    <div class="message">
+        {$message}
+    </div>
+    <div class="movies">
+        {#each $movies as movie (movie.imdbID)}
+            <MovieCard {movie} />
+        {/each}
+    </div>
+</div>
+
 <style lang="scss">
     .movie-list {
         margin-top: 30px;
@@ -29,14 +46,3 @@
     }
 </style>
 
-<div class:no-result={!$movies.length} class="movie-list">
-    {#if $loading}
-        <Loader />
-    {/if}
-    <div class="message">{$message}</div>
-    <div class="movies">
-        {#each $movies as movie (movie.imdbID)}
-            <MovieCard {movie} />
-        {/each}
-    </div>
-</div>

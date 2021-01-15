@@ -21,6 +21,22 @@
     ];
 </script>
 
+<header>
+    <Logo />
+    <nav>
+        <ul>
+            {#each menus as { href, name, path } (name)}
+                <li>
+                    <a use:link use:active={path} {href}>{name}</a>
+                </li>
+            {/each}
+        </ul>
+    </nav>
+    <div class="user">
+        <img src="/assets/svelte.png" alt="User" />
+    </div>
+</header>
+
 <style lang="scss">
     header {
         padding: 20px 40px;
@@ -81,15 +97,3 @@
         color: $color--primary !important;
     }
 </style>
-
-<header>
-    <Logo />
-    <nav>
-        <ul>
-            {#each menus as { href, name, path } (name)}
-                <li><a use:link use:active={path} {href}>{name}</a></li>
-            {/each}
-        </ul>
-    </nav>
-    <div class="user"><img src="/assets/svelte.png" alt="User" /></div>
-</header>

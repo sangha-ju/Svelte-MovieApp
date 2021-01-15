@@ -17,6 +17,30 @@
     }
 </script>
 
+<a 
+    class="movie" 
+    use:link 
+    href={`/movie/${movie.imdbID}`}
+>
+    {#if imageLoading}
+        <Loader scale=".5" absolute />
+    {/if}
+    <div 
+        class="poster" 
+        style="background-image: url({movie.Poster});"
+    >
+        {#if movie.Poster === 'N/A'}OMDbAPI<br /> N/A{/if}
+    </div>
+    <div class="info">
+        <div 
+            class="poster" 
+            style="background-image: url({movie.Poster})" 
+        />
+        <div class="year">{movie.Year}</div>
+        <div class="title">{movie.Title}</div>
+    </div>
+</a>
+
 <style lang="scss">
     .movie {
         width: 200px;
@@ -100,17 +124,3 @@
         }
     }
 </style>
-
-<a class="movie" use:link href={`/movie/${movie.imdbID}`}>
-    {#if imageLoading}
-        <Loader scale=".5" absolute />
-    {/if}
-    <div class="poster" style="background-image: url({movie.Poster});">
-        {#if movie.Poster === 'N/A'}OMDbAPI<br /> N/A{/if}
-    </div>
-    <div class="info">
-        <div class="poster" style="background-image: url({movie.Poster})" />
-        <div class="year">{movie.Year}</div>
-        <div class="title">{movie.Title}</div>
-    </div>
-</a>

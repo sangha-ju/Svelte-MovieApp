@@ -26,6 +26,48 @@
     }
 </script>
 
+<div class="search">
+    <div class="text-field">
+        <input
+            bind:value={title}
+            placeholder="Search for Movies, Series & more"
+            type="text"
+            on:keydown={(event) => {
+                event.key === 'Enter' && apply();
+            }} 
+        />
+    </div>
+
+    <div class="select">
+        <select bind:value={type}>
+            {#each types as t (t)}
+                <option value={t}>
+                    {_upperFirst(t)}
+                </option>
+            {/each}
+        </select>
+    </div>
+
+    <div class="select">
+        <select bind:value={year}>
+            <option value="">All years</option>
+            {#each years as y (y)}
+                <option>{y}</option>
+            {/each}
+        </select>
+    </div>
+
+    <div class="select">
+        <select bind:value={number}>
+            {#each numbers as n (n)}
+                <option>{n}</option>
+            {/each}
+        </select>
+    </div>
+
+    <button class="btn" on:click={apply}>Apply</button>
+</div>
+
 <style lang="scss">
     .search {
         display: grid;
@@ -103,42 +145,3 @@
         }
     }
 </style>
-
-<div class="search">
-    <div class="text-field">
-        <input
-            bind:value={title}
-            placeholder="Search for Movies, Series & more"
-            type="text"
-            on:keydown={(event) => {
-                event.key === 'Enter' && apply();
-            }} />
-    </div>
-
-    <div class="select">
-        <select bind:value={type}>
-            {#each types as t (t)}
-                <option value={t}>{_upperFirst(t)}</option>
-            {/each}
-        </select>
-    </div>
-
-    <div class="select">
-        <select bind:value={year}>
-            <option value="">All years</option>
-            {#each years as y (y)}
-                <option>{y}</option>
-            {/each}
-        </select>
-    </div>
-
-    <div class="select">
-        <select bind:value={number}>
-            {#each numbers as n (n)}
-                <option>{n}</option>
-            {/each}
-        </select>
-    </div>
-
-    <button class="btn" on:click={apply}>Apply</button>
-</div>
